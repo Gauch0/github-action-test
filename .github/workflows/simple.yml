@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: eccho "Hello World"
+        run: echo "Hello World"
       - name: multiline Script
         run: |
           node -v
           npm -v
-      - name: pyhon Command
+      - name: Pyhon Command
         run: |
           import platform
           print(platform.processor())

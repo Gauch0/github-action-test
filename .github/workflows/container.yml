@@ -23,14 +23,14 @@ jobs:
          args: '-v'
       - uses: actions/checkout@v1
 
-      - name: Run a script
-        uses: docker://node:12.14.1-alpine3.10
-        with:
-         entrypoint: ./script.sh
-         args: "Some string"
+      # - name: Run a script
+      #   uses: docker://node:12.14.1-alpine3.10
+      #   with:
+      #    entrypoint: ./script.sh
+      #    args: "Some string"
       
       - name: send a discord message
-        uses: docker://twinproduction/discord-reminder-bot
+        uses: docker://twinproduction/discord-reminder-bot 
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           COMMAND_PREFIX: ""

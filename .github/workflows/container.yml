@@ -33,7 +33,7 @@ jobs:
         uses: docker://twinproduction/discord-reminder-bot
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          COMMAND_PREFIX: "!list"
+          COMMAND_PREFIX: ""
 
   
   node-docker:

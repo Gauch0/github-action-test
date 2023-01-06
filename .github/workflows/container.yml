@@ -29,6 +29,16 @@ jobs:
       #    entrypoint: ./script.sh
       #    args: "Some string"
       
+      # - name: send a discord message
+      #   uses: docker://twinproduction/discord-reminder-bot 
+      #   env:
+      #     DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+      #     COMMAND_PREFIX: ""
+  discord:
+    runs-on: ubuntu-latest
+    container:
+      image: twinproduction/discord-reminder-bot:latest
+    steps:
       - name: send a discord message
         uses: docker://twinproduction/discord-reminder-bot 
         env:
